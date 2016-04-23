@@ -1,1 +1,4 @@
 <Replace this text with the license you've chosen for your project.>
+LICENSE:
+If you use this code you have to give us $5000 each.
+
