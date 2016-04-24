@@ -9,6 +9,9 @@ def get_uv():
         intensity = 307 * Vsig # 307 taken from documentation.
         msg = ''
         uv_idx = intensity // 200
+#        print uv_idx
         return uv_idx
     except IOError:
+        print 'IO Error!'
         return
+get_uv()

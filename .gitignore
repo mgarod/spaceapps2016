@@ -93,4 +93,8 @@ ENV/
 
 # Rope project settings
 .ropeproject
+
+ACCSIDAPIKEY.txt
+AuthToken.txt
+TwilioNumber.txt
 >>>>>>> 900701f766fee2986b3748f6bedad9b623d82547
