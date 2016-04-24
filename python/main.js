@@ -57,7 +57,7 @@ serialPort.on("open", function () {
           
 
           
-          fs.writeFile("/home/root/gps_data/new/" + new_file, gps_time + ';' + gps_data + '\n', function(err) {
+          fs.writeFile("/home/root/gps_data/new/" + "gps", gps_time + ';' + gps_data + '\n', function(err) {
               if(err) {
                 return console.log(err);
             }
