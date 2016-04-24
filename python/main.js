@@ -2,7 +2,7 @@ var m = require('mraa'); //require mraa
 var fs = require('fs'); // require filesystem
 
 u = new m.Uart(0);
-console.log(u.getDevicePath());
+//console.log(u.getDevicePath());
 
 var SerialPort = require("serialport").SerialPort
 var serialPort = new SerialPort(u.getDevicePath(), {
@@ -31,14 +31,14 @@ var serialPort = new SerialPort(u.getDevicePath(), {
 
 //write all received data into new_file
 serialPort.on("open", function () {
-  console.log('open');
+  //console.log('open');
   serialPort.on('data', function(data) {
       var data_string = '' + data
       if (data_string.substring(0,6) == '$GPGGA') {
           gpgga_string = data_string.split('\n')[0];
           gpgga_string = gpgga_string.replace('\n', '');
           gps_data = gpgga_string.split(',');
-          console.log('data received: ' + gps_data);
+          //console.log('data received: ' + gps_data);
           var time_string = gps_data[1];
           var gps_time = new Date();
           var gps_time_hours = parseInt(gps_data[1].substring(0,2));
@@ -52,8 +52,8 @@ serialPort.on("open", function () {
           gps_lat_ns = gps_data[3];
           gps_lon = gps_data[5];
           gps_lon_ew = gps_data[6];
-          console.log('gps_time', gps_time);
-          console.log(gps_lat, gps_lat_ns);
+          //console.log('gps_time', gps_time);
+          //console.log(gps_lat, gps_lat_ns);
           
 
           
@@ -61,7 +61,7 @@ serialPort.on("open", function () {
               if(err) {
                 return console.log(err);
             }
-              console.log("line was aappended to file", gps_time + ';' + gps_data + ';');
+              //console.log("line was aappended to file", gps_time + ';' + gps_data + ';');
           }); 
 
 
@@ -69,7 +69,7 @@ serialPort.on("open", function () {
               if(err) {
                 return console.log(err);
             }
-              console.log("line was aappended to file", gps_lat + 'ln;');
+              //console.log("line was aappended to file", gps_lat + 'ln;');
           }); 
 
 
@@ -77,7 +77,7 @@ serialPort.on("open", function () {
               if(err) {
                 return console.log(err);
             }
-              console.log("line was aappended to file", gps_lon + 'ln;');
+             // console.log("line was aappended to file", gps_lon + 'ln;');
           }); 
 
       }
