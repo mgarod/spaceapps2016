@@ -22,3 +22,5 @@ def main():
         send_Twilio(phone_number, msg)
     else:
         pass # nothing?
+
+main()
