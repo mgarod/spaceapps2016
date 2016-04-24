@@ -47,6 +47,8 @@ def main():
         uv_index = get_uv()
         temp = get_temp()
         airq = get_quality()
+        lcd2 = 'UV{0} Temp{1}'.format(uv_index, temp)
+        lcd3 = 'Air Qu:{0}'.format(airq)
         myLcd.setCursor(0,0)
         myLcd.write(lcd2)
         myLcd.setCursor(1,0)
