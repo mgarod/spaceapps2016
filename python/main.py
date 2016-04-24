@@ -3,6 +3,21 @@ from temp_check import get_temp
 from uv_check import get_uv
 from twiliosms import send_Twilio
 from air_check import get_quality
+import socket
+import fcntl
+import struct
+
+import pyupm_i2clcd as lcd
+myLcd = lcd.Jhd1313m1(0, 0x3E, 0x62)
+
+# Clear
+myLcd.clear()
+
+# Green
+myLcd.setColor(255, 255, 255)
+
+# Zero the cursor
+myLcd.setCursor(0,0)
 
 def main():
     phone_number = '+17177468642' 
