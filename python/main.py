@@ -22,7 +22,16 @@ def main():
     file = open('long', 'r')
     lon = file.read()
     msg = "({0}, {1})".format(lat, lon)
+    lcd1 = "({0}, {1})".format(lat, lon)
     msg += 'Temp: {0}  UV: {1} Air Quality: {2}'.format(temp, uv_index, airq)
+    lcd2 = 'UV: {0} Temp {1}'.format(uv_index, temp)
+    lcd3 = 'Air Quality: {0}'.format(airq)
+
+    send_Twilio(phone_number, msg)
+    myLcd.setCursor(0,0)
+    myLcd.write(lcd2)
+    myLcd.setCursor(1,0)
+    myLcd.write(lcd3)
 
     send_Twilio(phone_number, msg)
     #else:
