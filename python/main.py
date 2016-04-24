@@ -7,7 +7,7 @@ from air_check import get_quality
 def main():
     phone_number = '+17177468642' 
     #phone_number = raw_input("Enter phone number: ")
-    gps_success = execute_js('main.js')
+    #gps_success = execute_js('main.js')
 
     while True:
         uv_index = get_uv()
