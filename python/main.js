@@ -10,20 +10,20 @@ var serialPort = new SerialPort(u.getDevicePath(), {
 });
 
 // check for lowest number in dir "new" -> to determin file to write data to
-var new_file = '';
-var files_in_new = [];
-fs.readdirSync("/home/root/gps_data/new").forEach(function(file) {
-    console.log(file);
-    files_in_new.push(file);
-});
-console.log('files_in_new', files_in_new);
+// var new_file = '';
+// var files_in_new = [];
+// fs.readdirSync("/home/root/gps_data/new").forEach(function(file) {
+//     console.log(file);
+//     files_in_new.push(file);
+// });
+// console.log('files_in_new', files_in_new);
 
-for (i = 0; i < 100; i++) {
-    new_file = '' + i;
-    if (files_in_new.indexOf(new_file) <= -1) {
-        break;
-    }
-}
+// for (i = 0; i < 100; i++) {
+//     new_file = '' + i;
+//     if (files_in_new.indexOf(new_file) <= -1) {
+//         break;
+//     }
+// }
 
 
 
@@ -57,7 +57,7 @@ serialPort.on("open", function () {
           
 
           
-          fs.writeFile("/home/root/gps_data/new/" + "gps", gps_time + ';' + gps_data + '\n', function(err) {
+          fs.writeFile(/*"/home/root/gps_data/new/"  + */"gps", gps_time + ';' + gps_data + '\n', function(err) {
               if(err) {
                 return console.log(err);
             }
@@ -65,7 +65,7 @@ serialPort.on("open", function () {
           }); 
 
 
-          fs.writeFile("/home/root/gps_data/new/" + "lat", gps_lat + '\n', function(err) {
+          fs.writeFile(/*"/home/root/gps_data/new/" + */"lat", gps_lat + '\n', function(err) {
               if(err) {
                 return console.log(err);
             }
@@ -73,7 +73,7 @@ serialPort.on("open", function () {
           }); 
 
 
-         fs.writeFile("/home/root/gps_data/new/" + "long", gps_lon + '\n', function(err) {
+         fs.writeFile(/*"/home/root/gps_data/new/"  + */"long", gps_lon + '\n', function(err) {
               if(err) {
                 return console.log(err);
             }
