@@ -22,4 +22,5 @@ def send_Twilio( TO_NUM, MSG ):
 	    )
 	    print message
         except TwilioRestException as e:
-            print e
+            print e.code
+            print e.message
