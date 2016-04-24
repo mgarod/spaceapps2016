@@ -9,7 +9,7 @@ air_sensor_value = 0
 air_quality_sensor = mraa.Aio(1)
 
 def get_air_quality():
-    '''Returns a tuple, a float value and a string.'''
+    '''Returns a tuple, a float value.'''
     try:
         air_sensor_value = air_quality_sensor.readFloat()
         return air_sensor_value
