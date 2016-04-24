@@ -1,4 +1,4 @@
-import gps, temp_check, uv_check, twilio
+import temp_check, uv_check, twilio
 from Naked.toolshed.shell import execute_js
 
 def main():
