@@ -16,7 +16,7 @@ def get_temp():
     #     return temp
     # except IOError:
     #     return
-    B = 3975
+    #B = 3975
     ain = mraa.Aio(2)
     a = ain.read()
     resistance = (1023-a)*10000.0/a
