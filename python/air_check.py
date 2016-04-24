@@ -19,10 +19,11 @@ def main():
             else:
                 print "Air is clean enough."
 
-            print "Sensor value: " + air_sensor_value
+            print "Sensor value: ", air_sensor_value
             time.sleep(.5)
+        except KeyboardInterrupt:
+            break
         except IOError:
-            print "Can\'t read sensor. Stopping scanner."
-            get_sensor_value = False
+            print "Can\'t read sensor."
 
 main()
