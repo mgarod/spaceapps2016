@@ -21,7 +21,8 @@ def get_temp():
     a = ain.read()
     resistance = (1023-a)*10000.0/a
     temp = 1/(math.log(resistance/10000.0)/3975+1/298.15)-273.15
-    return temp
+    f = temp * (9/5) + 32
+    return f
 # =======
 #     try:
 #         temp_sensor = mraa.Aio(2)
