@@ -1,17 +1,13 @@
-import time, mraa
+import mraa
 
 # Connected Grove temp sensor to analog port A2
 
-def main():
-    while True:
-        try:
-            temp_sensor = mraa.Aio(2)
-            temp = temp_sensor.readFloat()
-            print "Temperature: ", temp
-
-        except KeyboardInterrupt:
-            break
-        except IOError:
-            print "Could not read temperature."
-
-main()
+def get_temp():
+    try:
+        temp_sensor = mraa.Aio(2)
+        t = temp_sensor.readFloat()
+        resistance = (1023 - t) * 10000.0 / t
+        temp = 1 / (math.log(resistance / 10000.0) / B + 1 / 298.15) - 273.15
+        return temp
+    except IOError:
+        return
