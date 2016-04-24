@@ -79,7 +79,7 @@ serialPort.on("open", function () {
             }
              // console.log("line was aappended to file", gps_lon + 'ln;');
           }); 
-
+          return;
       }
   });
 });
