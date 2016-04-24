@@ -16,11 +16,11 @@ def get_temp():
     #     return temp
     # except IOError:
     #     return
-    B = 3975
+    #B = 3975
     ain = mraa.Aio(2)
     a = ain.read()
     resistance = (1023-a)*10000.0/a
-    temp = 1/(math.log(resistance/10000.0)B+1/298.15)-273.15
+    temp = 1/(math.log(resistance/10000.0)3975+1/298.15)-273.15
     return temp
 # =======
 #     try:
