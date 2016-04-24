@@ -1,4 +1,4 @@
-import temp_check, uv_check, twilio
+import temp_check, uv_check, twiliosms
 from Naked.toolshed.shell import execute_js
 
 def main():
