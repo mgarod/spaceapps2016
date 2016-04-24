@@ -40,7 +40,7 @@ def main():
     lcd1 = "({0}, {1})".format(lat, lon)
     msg += 'Temp: {0}  UV: {1} Air Quality: {2}'.format(temp, uv_index, airq)
     lcd2 = 'UV: {0} Temp {1}'.format(uv_index, temp)
-    lcd3 = 'Air Qua:{0}'.format(airq)
+    lcd3 = 'Air Qu:{0}'.format(airq)
 
     send_Twilio(phone_number, msg)
     while True:
