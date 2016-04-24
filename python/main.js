@@ -38,7 +38,7 @@ serialPort.on("open", function () {
           gpgga_string = data_string.split('\n')[0];
           gpgga_string = gpgga_string.replace('\n', '');
           gps_data = gpgga_string.split(',');
-          //console.log('data received: ' + gps_data);
+          console.log('data received: ' + gps_data);
           var time_string = gps_data[1];
           var gps_time = new Date();
           var gps_time_hours = parseInt(gps_data[1].substring(0,2));
@@ -79,7 +79,7 @@ serialPort.on("open", function () {
             }
              // console.log("line was aappended to file", gps_lon + 'ln;');
           }); 
-          return;
+      return;
       }
   });
 });

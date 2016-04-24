@@ -9,7 +9,7 @@ FROM_NUM= file.read()
 
 
 def send_Twilio( TO_NUM, MSG ):
-
+	print "What up"
 	client = TwilioRestClient(ACCOUNT_SID, AUTH_TOKEN)
 
 	message = client.messages.create(

@@ -4,6 +4,8 @@ from uv_check import get_uv
 from twiliosms import send_Twilio
 from air_check import get_quality
 
+send_Twilio('+17177468642', 'Lol')
+
 def main():
     phone_number = '+17177468642'
     #phone_number = raw_input("Enter phone number: ")
@@ -15,6 +17,7 @@ def main():
         airq = get_quality()
 
         if gps_success:
+            print "GPS Success"
             file = open('lat', 'r')
             lat = file.read()
             file = open('long', 'r')
