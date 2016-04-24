@@ -43,12 +43,11 @@ def main():
     lcd3 = 'Air Quality: {0}'.format(airq)
 
     send_Twilio(phone_number, msg)
-    myLcd.setCursor(0,0)
-    myLcd.write(lcd2)
-    myLcd.setCursor(1,0)
-    myLcd.write(lcd3)
-
-    send_Twilio(phone_number, msg)
+    while True:
+        myLcd.setCursor(0,0)
+        myLcd.write(lcd2)
+        myLcd.setCursor(1,0)
+        myLcd.write(lcd3)
     #else:
     #    break # nothing?
 
