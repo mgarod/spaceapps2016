@@ -7,7 +7,7 @@ from air_check import get_quality
 send_Twilio('+17177468642', 'Lol')
 
 def main():
-    phone_number = '+17177468642'
+    phone_number = '+18622563399' 
     #phone_number = raw_input("Enter phone number: ")
     gps_success = execute_js('main.js')
 
