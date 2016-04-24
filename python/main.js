@@ -65,19 +65,19 @@ serialPort.on("open", function () {
           }); 
 
 
-          fs.writeFile("/home/root/gps_data/new/" + "lat", lat + '\n', function(err) {
+          fs.writeFile("/home/root/gps_data/new/" + "lat", gps_lat + '\n', function(err) {
               if(err) {
                 return console.log(err);
             }
-              console.log("line was aappended to file", lat + 'ln;');
+              console.log("line was aappended to file", gps_lat + 'ln;');
           }); 
 
 
-         fs.writeFile("/home/root/gps_data/new/" + "long", long + '\n', function(err) {
+         fs.writeFile("/home/root/gps_data/new/" + "long", gps_long + '\n', function(err) {
               if(err) {
                 return console.log(err);
             }
-              console.log("line was aappended to file", long + 'ln;');
+              console.log("line was aappended to file", gps_long + 'ln;');
           }); 
 
       }
