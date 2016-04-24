@@ -8,17 +8,21 @@ get_sensor_value = True
 air_sensor_value = 0
 air_quality_sensor = mraa.Aio(0)
 
-while get_sensor_value:
-    try:
-        air_sensor_value = air_quality_sensor.readFloat()
-        if air_sensor_value > 700:
-            print "High pollution!"
-        elif air_sensor_value > 300:
-            print "Low pollution"
-        else:
-            print "Air is clean enough."
+def main():
+    while get_sensor_value:
+        try:
+            air_sensor_value = air_quality_sensor.readFloat()
+            if air_sensor_value > 700:
+                print "High pollution!"
+            elif air_sensor_value > 300:
+                print "Low pollution"
+            else:
+                print "Air is clean enough."
 
-        print "Sensor value: " + air_sensor_value
-        time.sleep(.5)
-    except IOError:
-        print "Can\'t read sensor."
+            print "Sensor value: " + air_sensor_value
+            time.sleep(.5)
+        except IOError:
+            print "Can\'t read sensor. Stopping scanner."
+            get_sensor_value = False
+
+main()
