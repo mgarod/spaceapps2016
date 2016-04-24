@@ -73,11 +73,11 @@ serialPort.on("open", function () {
           }); 
 
 
-         fs.writeFile("/home/root/gps_data/new/" + "long", gps_long + '\n', function(err) {
+         fs.writeFile("/home/root/gps_data/new/" + "long", gps_lon + '\n', function(err) {
               if(err) {
                 return console.log(err);
             }
-              console.log("line was aappended to file", gps_long + 'ln;');
+              console.log("line was aappended to file", gps_lon + 'ln;');
           }); 
 
       }
