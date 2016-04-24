@@ -10,22 +10,22 @@ def main():
     #gps_success = execute_js('main.js')
 
     #while True:
-        uv_index = get_uv()
-        temp = get_temp()
-        airq = get_quality()
-        print airq
+    uv_index = get_uv()
+    temp = get_temp()
+    airq = get_quality()
+    print airq
 
-        # if gps_success:
-        #     print "GPS Success"
-        file = open('lat', 'r')
-        lat = file.read()
-        file = open('long', 'r')
-        lon = file.read()
-        msg = "({0}, {1})".format(lat, lon)
-        msg += 'Temp: {0}  UV: {1} Air Quality: {2}'.format(temp, uv_index, airq)
+    # if gps_success:
+    #     print "GPS Success"
+    file = open('lat', 'r')
+    lat = file.read()
+    file = open('long', 'r')
+    lon = file.read()
+    msg = "({0}, {1})".format(lat, lon)
+    msg += 'Temp: {0}  UV: {1} Air Quality: {2}'.format(temp, uv_index, airq)
 
-            send_Twilio(phone_number, msg)
-        #else:
-        #    break # nothing?
+    send_Twilio(phone_number, msg)
+    #else:
+    #    break # nothing?
 
 main()
