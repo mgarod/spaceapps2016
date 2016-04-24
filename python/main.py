@@ -44,6 +44,9 @@ def main():
 
     send_Twilio(phone_number, msg)
     while True:
+        uv_index = get_uv()
+        temp = get_temp()
+        airq = get_quality()
         myLcd.setCursor(0,0)
         myLcd.write(lcd2)
         myLcd.setCursor(1,0)
