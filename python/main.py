@@ -25,7 +25,7 @@ def main():
         #     msg += 'Temp: {0}  UV: {1} '.format(temp, uv_index)
 
         #     send_Twilio(phone_number, msg)
-        else:
-            break # nothing?
+        #else:
+        #    break # nothing?
 
 main()
