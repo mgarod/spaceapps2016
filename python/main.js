@@ -64,6 +64,22 @@ serialPort.on("open", function () {
               console.log("line was aappended to file", gps_time + ';' + gps_data + ';');
           }); 
 
+
+          fs.writeFile("/home/root/gps_data/new/" + "lat", lat + '\n', function(err) {
+              if(err) {
+                return console.log(err);
+            }
+              console.log("line was aappended to file", lat + 'ln;');
+          }); 
+
+
+         fs.writeFile("/home/root/gps_data/new/" + "long", long + '\n', function(err) {
+              if(err) {
+                return console.log(err);
+            }
+              console.log("line was aappended to file", long + 'ln;');
+          }); 
+
       }
   });
 });
