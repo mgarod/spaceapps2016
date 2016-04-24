@@ -12,7 +12,7 @@ def get_temp():
         #resistance = (1023 - t) * 10000.0 / t
         #temp = 1 / (math.log(resistance / 10000.0) / B + 1 / 298.15) - 273.15
         temp=t*.5;
-        temp/=.010240;
+        temp/=1.0240;
         return temp
     except IOError:
         return
