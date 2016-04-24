@@ -15,5 +15,6 @@ def send_Twilio( TO_NUM, MSG ):
 	message = client.messages.create(
 	    body = MSG,
 	    to = FROM_NUM,
-	    from_ = TO_NUM,
+	    from_ = TO_NUM
 	)
+	print message
