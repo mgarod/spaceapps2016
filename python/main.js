@@ -55,20 +55,13 @@ serialPort.on("open", function () {
           console.log('gps_time', gps_time);
           console.log(gps_lat, gps_lat_ns);
           
-          myDigitalAccelerometer.getAcceleration(ax, ay, az);
-          var accel_string = roundNum(digitalAccelerometer.floatp_value(ax), 6) + '' 
-                        + ", " + roundNum(digitalAccelerometer.floatp_value(ay), 6) 
-                        + ", " + roundNum(digitalAccelerometer.floatp_value(az), 6)
-          console.log('accel', accel_string);
+
           
-          console.log('temp celsius', temperature_sensor.value());
-          var temperature_string = temperature_sensor.value();
-          
-          fs.appendFile("/home/root/gps_data/new/" + new_file, gps_time + ';' + accel_string + ';' + temperature_string + ';' + gps_data + '\n', function(err) {
+          fs.appendFile("/home/root/gps_data/new/" + new_file, gps_time + ';' + gps_data + '\n', function(err) {
               if(err) {
                 return console.log(err);
             }
-              console.log("line was aappended to file", gps_time + ';' + gps_data + ';;;' + accel_string);
+              console.log("line was aappended to file", gps_time + ';' + gps_data + ';');
           }); 
 
       }
@@ -85,12 +78,6 @@ function roundNum(num, decimalPlaces)
 }
 
 
-
-
-
-
-
-gg
 
 
 /*
