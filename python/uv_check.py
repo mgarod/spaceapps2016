@@ -1,6 +1,6 @@
 import mraa
 
-# Connected Grove temp sensor to analog port A2
+# Connected Grove temp sensor to analog port A3
 
 def get_uv():
     try:

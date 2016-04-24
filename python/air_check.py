@@ -1,7 +1,7 @@
 import time
 import mraa
 
-# Connect the Grove Air Quality Sensor to analog port A0
+# Connect the Grove Air Quality Sensor to analog port A1
 # SIG,NC,VCC,GND
 
 get_sensor_value = True
