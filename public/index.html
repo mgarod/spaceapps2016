@@ -19,14 +19,16 @@
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.7/angular-resource.min.js"></script>
 
         <script src="app.js"></script>
+        <link rel="stylesheet" type="text/css" href="style.css">
+
     </head>
     <body>
 
         <header>
-			<nav class="navbar navbar-default">
+			<nav class="navbar navbar-inverse">
 			<div class="container">
 				<div class="navbar-header">
-					<a class="navbar-brand" href="/spaceapps/index.html">Test</a>
+					<a class="navbar-brand" href="/">Meteorite Landings</a>
 				</div>
 
 			</div>
@@ -35,28 +37,20 @@
 
         <div class="container" ng-controller="homeController">
 
-            <table class="table table-striped table-bordered table-hover table-responsive">
+            <table id="hor-minimalist-b">
             <thead>
                 <tr>
                     <th>Name</th>
-                    <th>Fall</th>
-                <th>Coordinates</th>
-                <th>ID</th>
-                <th>Mass</th>
-                <th>Year</th>
-                <th>Recclass</th>
+                    <th>Coordinates</th>
+                    <th>Year</th>
             </thead>
             </tr>
             <tbody>
                 <tr ng-repeat="data in mdata">
                     <td>{{ data.name }}</td>
-                    <td>{{ data.fall }}</td>
                     <td>{{ data.geolocation.coordinates }}</td>
-                    <td>{{ data.id }}</td>
-                    <td>{{ data.mass }}</td>
                     <td>{{ data.year }}</td>
 
-                    <td>{{ data.recclass }}</td>
                 </tr>
             </tbody>
             </table>
