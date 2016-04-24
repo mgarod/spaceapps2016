@@ -15,11 +15,10 @@ def send_Twilio( TO_NUM, MSG ):
 
         try:
 	    message = client.messages.create(
-	        to = '+17177468642', #TO_NUM,
+	        to = TO_NUM, #TO_NUM,
 	        from_ = '+18622563399',#FROM_NUM,
-                body = 'LOL'
+            body = MSG
 	    )
 	    print message
         except TwilioRestException as e:
             print e
-send_Twilio('', '')
