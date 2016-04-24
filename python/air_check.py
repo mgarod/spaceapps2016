@@ -18,3 +18,5 @@ def get_quality():
         msg += "Air fresh, "
 
     msg += "Sensor value: " + str(sensor_value)
+
+    return msg
